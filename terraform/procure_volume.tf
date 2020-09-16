@@ -1,7 +1,7 @@
 resource "aws_ebs_volume" "volume"{
-    availability_zone = "us-east-1a"
+    availability_zone = var.aws_az
     size = 10
     tags = {
-        Name = "IBM-DEVOPS-KUL"
+        Name = var.tag_name
     }
 }

@@ -1,5 +1,5 @@
 resource "aws_security_group" "centos_server_sg_group"{
-    name = "kul-sg"
+    name = "kul-sg-1"
     description = "This is demo SG group for IBM DevOps Session"
 
     egress{
