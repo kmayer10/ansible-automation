@@ -1,0 +1,9 @@
+- name: Copy file from Ansible Controller to Managed Nodes
+  hosts: all
+
+  tasks: 
+  - name: Copy ansible.cfg
+    copy: 
+      src: ansible.cfg
+      dest: /tmp/ansible.cfg
+      
