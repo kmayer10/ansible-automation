@@ -6,3 +6,9 @@
     package: 
       name: git
       state: present
+  - name: Installing Maven & Java with package list option
+    package: 
+      name: 
+      - java
+      - maven
+      state: present
