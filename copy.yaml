@@ -6,4 +6,6 @@
     copy: 
       src: ansible.cfg
       dest: /tmp/ansible.cfg
-      
+      mode: "755"
+      owner: kul
+      group: users      
