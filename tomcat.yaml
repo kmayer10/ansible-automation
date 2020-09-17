@@ -1,0 +1,42 @@
+- name: Install Tomcat Server
+  hosts: tomcat
+  
+  tasks: 
+  - name: Installing Java
+    package: 
+      name: java
+      state: present
+
+  - name: Download tomcat tar
+    get_url: 
+      url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
+      dest: /tmp/tomcat.tar.gz
+
+  - name: Extract tar file
+    unarchive: 
+      src: /tmp/tomcat.tar.gz
+      dest: /opt
+      remote_src: yes
+
+  - name: Copy Tomcat Configuration file
+    copy:
+      src: server.xml
+      dest: /opt/apache-tomcat-8.5.58/conf/server.xml
+
+  - name: Copy Tomcat Init file
+    copy: 
+      src: tomcat-init.sh
+      dest: /etc/init.d/tomcat
+      mode: "755"
+
+  - name: Starting Tomcat Service
+    service: 
+      name: tomcat
+      state: started
+      enabled: yes
+
+  - name: Copy Application WAR file
+    copy:
+      src: devops.war
+      dest: /opt/apache-tomcat-8.5.58/webapps/devops.war
+
