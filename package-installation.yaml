@@ -12,3 +12,20 @@
       - java
       - maven
       state: present
+
+- name: Install a package and start the service post same
+  hosts: 
+  - appservers
+  - dbsevers
+
+  tasks: 
+  - name: Installing NTP package
+    package: 
+      name: ntp
+      state: present
+
+  - name: Start NTPD Service
+    service: 
+      name: ntpd
+      state: started
+      enabled: yes
