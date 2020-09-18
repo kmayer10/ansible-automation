@@ -1,0 +1,2 @@
+- name: Disable SWAP & Configure IPTABLES
+  shell: swapoff -a && cp /etc/fstab /etc/fstab_old && echo "#This is temp file for Kubernetes Installation, correct file is /etc/fstab_old" >> /etc/fstab && echo 1 > /proc/sys/net/ipv4/ip_forward && echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables

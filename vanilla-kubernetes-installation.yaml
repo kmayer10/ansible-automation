@@ -11,3 +11,4 @@
   - docker
   - install-kubernetes
   - configure-control-plane
+  - join-node

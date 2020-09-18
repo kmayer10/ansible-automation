@@ -1,0 +1,4 @@
+---
+# tasks file for roles/join-node
+- import_tasks: configure-swap-iptables.yaml
+- import_tasks: join-node.yaml
