@@ -1,0 +1,7 @@
+- name: Installing Specific version of Docker as per k8s requirement
+  package: 
+    name: 
+      - "{{ dockerceversion }}"
+      - "{{ dockercliversion }}"
+      - "{{ containerdioversion }}"
+    state: present

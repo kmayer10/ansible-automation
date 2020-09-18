@@ -1,0 +1,4 @@
+---
+# handlers file for roles/docker
+
+- import_tasks: restart-docker.yaml
