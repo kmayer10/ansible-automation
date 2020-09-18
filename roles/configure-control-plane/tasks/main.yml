@@ -1,0 +1,8 @@
+---
+# tasks file for roles/configure-control-plane
+- import_tasks: disable-swap.yaml
+- import_tasks: init-master.yaml
+- import_tasks: setup-kubeconfig.yaml
+- import_tasks: configure-pod-network.yaml
+- import_tasks: generate-join-command.yaml
+- import_tasks: print-output.yaml

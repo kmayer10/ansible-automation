@@ -1,0 +1,3 @@
+  - name: Printing output on console
+    debug: var=output.stdout_lines
+    when: inventory_hostname in groups['master']

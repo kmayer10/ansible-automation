@@ -1,0 +1,2 @@
+- name: Disabling SWAP
+  shell: swapoff -a && cp /etc/fstab /etc/fstab_old && echo "#This is temp file for Kubernetes Installation, correct file is /etc/fstab_old" >> /etc/fstab && echo 1 > /proc/sys/net/ipv4/ip_forward

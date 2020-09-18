@@ -10,3 +10,4 @@
 
   - docker
   - install-kubernetes
+  - configure-control-plane
