@@ -1,0 +1,5 @@
+- name: Extract tar file
+  unarchive:
+    src: /tmp/tomcat.tar.gz
+    dest: /opt
+    remote_src: yes

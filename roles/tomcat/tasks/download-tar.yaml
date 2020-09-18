@@ -1,0 +1,4 @@
+- name: Download tomcat tar
+  get_url:
+    url: "{{ tomcaturl }}"
+    dest: /tmp/tomcat.tar.gz

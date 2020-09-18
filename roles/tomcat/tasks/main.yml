@@ -1,0 +1,6 @@
+---
+# tasks file for roles/tomcat
+- import_tasks: download-tar.yaml
+- import_tasks: extract-tar.yaml
+- import_tasks: copy-files.yaml
+- import_tasks: start-tomcat.yaml

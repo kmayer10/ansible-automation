@@ -1,0 +1,6 @@
+---
+# defaults file for roles/tomcat
+
+tomcaturl: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
+tomcatversion: apache-tomcat-8.5.58
+
