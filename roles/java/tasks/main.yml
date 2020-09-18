@@ -1,0 +1,4 @@
+---
+# tasks file for roles/java
+
+- import_tasks: install-java.yaml

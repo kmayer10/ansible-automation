@@ -1,0 +1,5 @@
+- name: Roles Demo
+  hosts: all
+
+  roles: 
+  - java

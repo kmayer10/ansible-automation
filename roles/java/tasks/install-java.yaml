@@ -1,0 +1,5 @@
+- name: Installing Java with package list option
+  package:
+    name: java
+    state: present
+
