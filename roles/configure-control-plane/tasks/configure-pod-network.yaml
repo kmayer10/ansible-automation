@@ -1,4 +1,4 @@
   - name: configuring POD network
-    shell: kubectl apply -f https://docs.projectcalico.org/v3.11/manifests/calico.yaml && sleep 30 && kubectl get nodes
+    shell: kubectl apply -f https://docs.projectcalico.org/v3.11/manifests/calico.yaml && kubectl get nodes
     register: output
     when: inventory_hostname in groups['master']
